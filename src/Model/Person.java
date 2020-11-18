@@ -11,4 +11,11 @@ package Model;
  */
 public class Person {
     
+    private int id;
+    private String name;
+    private String Genre;
+    private String Address;
+    private String cargo;
+    private int ativo;
+    
 }
