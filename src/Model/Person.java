@@ -17,5 +17,17 @@ public class Person {
     private String Address;
     private String cargo;
     private int ativo;
+
+    public Person(int id, String name, String Genre, String Address, String cargo, int ativo) {
+        this.id = id;
+        this.name = name;
+        this.Genre = Genre;
+        this.Address = Address;
+        this.cargo = cargo;
+        this.ativo = ativo;
+    }
+
+    public Person() {
+    }
     
 }
