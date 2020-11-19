@@ -5,10 +5,16 @@
  */
 package Model.Interface;
 
+import Exception.RegistrationSuccessfullyRegistredException;
+import Model.Person;
+
 /**
  *
  * @author Samuel
  */
-public class PersonInterface {
+public interface PersonInterface {
+    
+    public void inert (Person person) throws RegistrationSuccessfullyRegistredException;
+    
     
 }
