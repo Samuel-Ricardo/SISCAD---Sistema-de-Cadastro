@@ -5,6 +5,7 @@
  */
 package JDBC;
 
+import Util.Dialoger;
 import com.mysql.jdbc.Connection;
 
 /**
@@ -18,5 +19,19 @@ public class Test {
         Connection connection = ConnectionFactory.getConnection();
         
         ConnectionFactory.closeConnection(connection);
+    }
+    
+    public static boolean testConnection(){
+        
+        Connection connection = ConnectionFactory.getConnection();
+        
+        if(connection != null){
+            
+            ConnectionFactory.closeConnection(connection);
+            return true;
+        }else{
+            ConnectionFactory.closeConnection(connection);
+            return false;
+        }
     }
 }
