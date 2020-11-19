@@ -5,11 +5,13 @@
  */
 package Exception;
 
+import Model.Interface.Exceptions;
+
 /**
  *
  * @author Samuel
  */
-public class ExistingElementException extends Exception{
+public class ExistingElementException extends Exception implements Exceptions{
 
     public ExistingElementException() {
         super("Registro já cadastrado");
@@ -26,4 +28,11 @@ public class ExistingElementException extends Exception{
      
         return "Registro já cadastrado";
     } 
+    
+    public String getLog(){
+        
+        this.printStackTrace();
+        
+        return "Registro já cadastrado";
+    }
 }

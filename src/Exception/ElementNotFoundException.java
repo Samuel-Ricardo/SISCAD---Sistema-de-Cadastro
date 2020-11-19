@@ -14,25 +14,25 @@ import Model.Interface.Exceptions;
 public class ElementNotFoundException extends Exception implements Exceptions{
 
     public ElementNotFoundException() {
-        super("Registro já cadastrado");
+        super("Registro não encontrado");
     }
     
     @Override
     public String getMessage(){
                 
-        return "Registro já cadastrado";
+        return "Registro não encontrado";
     }
     
     @Override
     public String toString(){
      
-        return "Registro já cadastrado";
+        return "Registro não encontrado";
     } 
     
     public String getLog(){
         
         this.printStackTrace();
         
-        return "Registro já cadastrado";
+        return "Registro não encontrado";
     }
 }
