@@ -7,6 +7,7 @@ package Model.Interface;
 
 import Exception.*;
 import Model.Person;
+import java.util.List;
 
 /**
  *
@@ -19,4 +20,6 @@ public interface PersonInterface {
     public void update (Person person) throws UpdateErrorException;
     
     public void delete (Person person) throws DeletedRecordException;
+    
+    public List<Person> selectAll () throws EmptyDatabaseException;
 }
