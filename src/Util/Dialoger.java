@@ -21,9 +21,9 @@ public class Dialoger {
         
     }
     
-    public static void errorMessage(Component component, String body, Exception exception){
+    public static void errorMessage(Component component, Exception exception){
         
-        JOptionPane.showMessageDialog(component, body,);
+        JOptionPane.showMessageDialog(component, "Ocorreu um erro: " + exception.getMessage());
         
     }
 
