@@ -7,6 +7,7 @@ package JDBC;
 
 import com.mysql.jdbc.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -27,7 +28,7 @@ public class ConnectionFactory {
             Class.forName(DRIVER);
             
             return (Connection) DriverManager.getConnection(URL,USER,PASS);
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

@@ -24,7 +24,11 @@ public class Dialoger {
     public static void errorMessage(Component component, Exception exception){
         
         JOptionPane.showMessageDialog(component, "Ocorreu um erro: " + exception.getMessage());
+    }
+    
+    public static void errorMessage(Component component, String message, Exception exception){
         
+        JOptionPane.showMessageDialog(component, message + " " + exception.getMessage());
     }
 
     public static boolean confirm(Component component, String body) {
