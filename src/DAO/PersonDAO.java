@@ -96,7 +96,25 @@ public class PersonDAO implements PersonInterface{
 
     @Override
     public boolean delete(Person person) throws DeletedRecordException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       
+        connect();
+        PreparedStatement statement = null;
+        String sql = "DELETE FROM pessoa WHERE id = ?;";
+
+        try {
+
+            statement = connection.prepareStatement(sql);   
+
+            statement.setLong(1, person.getId());       
+
+            statement.execute();
+             return true;    
+        } catch (SQLException ex) {
+            Dialoger.errorMessage(null, "Erro ao Deletar:", ex);  
+            return false;   
+       } finally {
+            ConnectionFactory.closeConnection(connection, statement);  
+      }
     }
 
     @Override
