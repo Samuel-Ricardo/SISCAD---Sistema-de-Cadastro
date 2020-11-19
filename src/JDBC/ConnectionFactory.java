@@ -5,6 +5,11 @@
  */
 package JDBC;
 
+import com.mysql.jdbc.Connection;
+import java.sql.DriverManager;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Samuel
@@ -16,5 +21,15 @@ public class ConnectionFactory {
     private static final String USER = "root";
     private static final String PASS = "";
     
+    public static Connection getConnection(){
+     
+        try {
+            Class.forName(DRIVER);
+            
+            return (Connection) DriverManager.getConnection(URL,USER,PASS);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     
 }
