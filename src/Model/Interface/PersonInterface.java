@@ -5,10 +5,23 @@
  */
 package Model.Interface;
 
+import Exception.*;
+import Model.Person;
+import java.util.List;
+
 /**
  *
  * @author Samuel
  */
-public class PersonInterface {
+public interface PersonInterface {
     
+    public boolean inert (Person person) throws RegistrationSuccessfullyRegistredException;
+    
+    public boolean update (Person person) throws UpdateErrorException;
+    
+    public boolean delete (Person person) throws DeletedRecordException;
+    
+    public List<Person> selectAll () throws EmptyDatabaseException;
+    
+    public Person select (int id) throws ElementNotFoundException;
 }
