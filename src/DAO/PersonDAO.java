@@ -141,7 +141,7 @@ public class PersonDAO implements PersonInterface{
                 persons.add(person);
         }
            } catch (SQLException ex) {
-               Dialoger.errorMessage(null, "Erro ao Deletar:", ex);  
+               Dialoger.errorMessage(null, "Erro ao Consultar o Banco de Dados:", ex);  
            } finally {
                ConnectionFactory.closeConnection(connection, statement);
            }
@@ -150,7 +150,30 @@ public class PersonDAO implements PersonInterface{
     }
 
     @Override
-    public Person select(Person person) throws ElementNotFoundException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Person select(int id) throws ElementNotFoundException {
+       
+        connect();
+        PreparedStatement statement = null;
+        ResultSet result = null;
+        Person person = null;
+        String sql = "SELECT * FROM pessoa WHERE id = ?;";
+
+        try {
+
+            statement = connection.prepareStatement(sql);   
+
+            statement.setInt(1, id);
+            
+            result = statement.executeQuery();    
+
+                person = personFactory.generatePerson(result);
+                
+           } catch (SQLException ex) {
+               Dialoger.errorMessage(null, "Erro ao Consultar o Banco de Dados:", ex);  
+           } finally {
+               ConnectionFactory.closeConnection(connection, statement);
+           }
+
+        return person;
     }
 }

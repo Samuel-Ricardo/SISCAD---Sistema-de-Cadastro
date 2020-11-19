@@ -23,5 +23,5 @@ public interface PersonInterface {
     
     public List<Person> selectAll () throws EmptyDatabaseException;
     
-    public Person select (Person person) throws ElementNotFoundException;
+    public Person select (int id) throws ElementNotFoundException;
 }
