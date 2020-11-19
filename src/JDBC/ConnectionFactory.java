@@ -34,8 +34,8 @@ public class ConnectionFactory {
             return (Connection) DriverManager.getConnection(URL,USER,PASS);
             
         } catch (ClassNotFoundException | SQLException ex) {
-            Dialoger.errorMessage(null, "Erro ao realizar conexao com o banco de dados:", ex);
-            throw new RuntimeException("Erro ao realizar conexao com o banco de dados: " + ex);
+            Dialoger.errorMessage(null, "Erro ão realizar conexão com o banco de dados:", ex);
+            throw new RuntimeException("Erro ão realizar conexão com o banco de dados: " + ex);
         }
     }
     
@@ -48,7 +48,7 @@ public class ConnectionFactory {
                }
               
             } catch (SQLException ex) {
-               Dialoger.errorMessage(null, "Nao foi possivel encerrar conexao com o banco:", ex);
+               Dialoger.errorMessage(null, "Não foi possivel encerrar conexão com o banco:", ex);
             }
         }
     
@@ -61,7 +61,7 @@ public class ConnectionFactory {
                 statement.close();
             }
         } catch (SQLException ex) {
-            Dialoger.errorMessage(null, "Nao foi possivel encerrar conexao com o banco:", ex); 
+            Dialoger.errorMessage(null, "Não foi possivel encerrar conexão com o banco:", ex); 
         }
 
     }
@@ -76,7 +76,7 @@ public class ConnectionFactory {
                 result.close();
             }
         } catch (SQLException ex) {
-            Dialoger.errorMessage(null, "Nao foi possivel encerrar conexao com o banco:", ex); 
+            Dialoger.errorMessage(null, "Não foi possivel encerrar conexão com o banco:", ex); 
         }
 
     }
