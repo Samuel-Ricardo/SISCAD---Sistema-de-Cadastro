@@ -15,11 +15,11 @@ import java.util.List;
  */
 public interface PersonInterface {
     
-    public void inert (Person person) throws RegistrationSuccessfullyRegistredException;
+    public boolean inert (Person person) throws RegistrationSuccessfullyRegistredException;
     
-    public void update (Person person) throws UpdateErrorException;
+    public boolean update (Person person) throws UpdateErrorException;
     
-    public void delete (Person person) throws DeletedRecordException;
+    public boolean delete (Person person) throws DeletedRecordException;
     
     public List<Person> selectAll () throws EmptyDatabaseException;
     
