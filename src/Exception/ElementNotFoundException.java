@@ -5,32 +5,34 @@
  */
 package Exception;
 
+import Model.Interface.Exceptions;
+
 /**
  *
  * @author Samuel
  */
-public class EmptyDatabaseException extends Exception{
+public class ElementNotFoundException extends Exception implements Exceptions{
 
-    public EmptyDatabaseException() {
-        super("Nenhum registro cadastrado na Base de Dados");
+    public ElementNotFoundException() {
+        super("Registro já cadastrado");
     }
     
     @Override
     public String getMessage(){
-        
-        return "Nenhum registro cadastrado na Base de Dados";
+                
+        return "Registro já cadastrado";
     }
     
     @Override
     public String toString(){
      
-        return "Nenhum registro cadastrado na Base de Dados";
+        return "Registro já cadastrado";
     } 
     
     public String getLog(){
         
         this.printStackTrace();
         
-        return "Nenhum registro cadastrado na Base de Dados";
+        return "Registro já cadastrado";
     }
 }
