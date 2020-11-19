@@ -8,6 +8,8 @@ package JDBC;
 import Util.Dialoger;
 import com.mysql.jdbc.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -46,9 +48,38 @@ public class ConnectionFactory {
                }
               
             } catch (SQLException ex) {
-               Dialoger.errorMessage(null, "Erro ao encerrar conexao", ex);
+               Dialoger.errorMessage(null, "Nao foi possivel encerrar conexao com o banco:", ex);
             }
         }
+    
+    public static void closeConnection(Connection connection, PreparedStatement statement ){ 
+
+        closeConnection(connection);
+
+        try {
+            if (statement != null) {
+                statement.close();
+            }
+        } catch (SQLException ex) {
+            Dialoger.errorMessage(null, "Nao foi possivel encerrar conexao com o banco:", ex); 
+        }
+
     }
+
+    public static void closeConnection(Connection connection, PreparedStatement statement, ResultSet result) { 
+
+        closeConnection(connection, statement);
+
+        try {
+
+            if (result != null) {
+                result.close();
+            }
+        } catch (SQLException ex) {
+            Dialoger.errorMessage(null, "Nao foi possivel encerrar conexao com o banco:", ex); 
+        }
+
+    }
+
     
 }
