@@ -16,7 +16,9 @@ import Model.Person;
 import Util.Dialoger;
 import com.mysql.jdbc.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -119,7 +121,32 @@ public class PersonDAO implements PersonInterface{
 
     @Override
     public List<Person> selectAll() throws EmptyDatabaseException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        connect();
+        PreparedStatement statement = null;
+        ResultSet result = null;
+        List<Person> persons = new ArrayList<>();
+        String sql = "SELECT * FROM pessoa;";
+
+        try {
+
+            statement = connection.prepareStatement(sql);   
+
+            result = statement.executeQuery();    
+
+            while (result.next()) {
+
+                Person person = personFactory.generatePerson(result);
+
+                persons.add(person);
+        }
+           } catch (SQLException ex) {
+               Dialoger.errorMessage(null, "Erro ao Deletar:", ex);  
+           } finally {
+               ConnectionFactory.closeConnection(connection, statement);
+           }
+
+        return persons;
     }
 
     @Override
