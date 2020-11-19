@@ -37,4 +37,18 @@ public class ConnectionFactory {
         }
     }
     
+    public static void closeConnection(Connection connection){
+     
+        try {
+              if(connection != null) {
+                
+                connection.close();
+               }
+              
+            } catch (SQLException ex) {
+               Dialoger.errorMessage(null, "Erro ao encerrar conexao", ex);
+            }
+        }
+    }
+    
 }
