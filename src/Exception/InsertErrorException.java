@@ -14,25 +14,25 @@ import Model.Interface.Exceptions;
 public class InsertErrorException extends Exception implements Exceptions{
 
     public InsertErrorException() {
-        super("Erro ao cadastrar");
+        super("Erro ao inserir");
     }
     
     @Override
     public String getMessage(){
                 
-        return "Erro ao cadastrar";
+        return "Erro ao inserir";
     }
     
     @Override
     public String toString(){
      
-        return "Erro ao cadastrar";
+        return "Erro ao inserir";
     } 
     
     public String getLog(){
         
         this.printStackTrace();
         
-        return "Erro ao cadastrar";
+        return "Erro ao inserir";
     }
 }
