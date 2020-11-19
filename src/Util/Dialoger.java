@@ -5,6 +5,7 @@
  */
 package Util;
 
+import Model.Interface.Exceptions;
 import java.awt.Component;
 import javax.swing.JOptionPane;
 
@@ -21,9 +22,9 @@ public class Dialoger {
         
     }
     
-    public static void errorMessage(Component component, Exception exception){
+    public static void errorMessage(Component component, Exceptions exception){
         
-        JOptionPane.showMessageDialog(component, "Ocorreu um erro: " + exception.getMessage());
+        JOptionPane.showMessageDialog(component, "Ocorreu um erro: " + exception.getLog());
     }
     
     public static void errorMessage(Component component, String message, Exception exception){

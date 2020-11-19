@@ -10,6 +10,7 @@ import Exception.ElementNotFoundException;
 import Exception.EmptyDatabaseException;
 import Exception.RegistrationSuccessfullyRegistredException;
 import Exception.UpdateErrorException;
+import Factory.PersonFactory;
 import JDBC.ConnectionFactory;
 import Model.Interface.PersonInterface;
 import Model.Person;
@@ -28,6 +29,17 @@ import java.util.List;
 public class PersonDAO implements PersonInterface{
     
     private Connection connection;
+    private PersonFactory personFactory;
+
+    public PersonDAO(PersonFactory personFactory) {
+
+        this.personFactory = personFactory;
+    }
+
+    public PersonDAO() {
+        
+        this.personFactory = new PersonFactory();
+    }
     
     @Override
     public boolean inert(Person person) throws RegistrationSuccessfullyRegistredException {
