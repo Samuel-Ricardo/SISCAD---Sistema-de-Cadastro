@@ -22,4 +22,6 @@ public interface PersonInterface {
     public void delete (Person person) throws DeletedRecordException;
     
     public List<Person> selectAll () throws EmptyDatabaseException;
+    
+    public Person select (Person person) throws ElementNotFoundException;
 }
