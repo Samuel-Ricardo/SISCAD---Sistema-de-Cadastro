@@ -5,6 +5,7 @@
  */
 package JDBC;
 
+import Util.Dialoger;
 import com.mysql.jdbc.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -25,11 +26,14 @@ public class ConnectionFactory {
     public static Connection getConnection(){
      
         try {
+            
             Class.forName(DRIVER);
             
             return (Connection) DriverManager.getConnection(URL,USER,PASS);
+            
         } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
+            Dialoger.errorMessage(null, "Erro ao realizar conexao com o banco de dados:", ex);
+            throw new RuntimeException("Erro ao realizar conexao com o banco de dados: " + ex);
         }
     }
     
