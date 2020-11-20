@@ -49,7 +49,7 @@ public class RegisterController {
     
         DefaultComboBoxModel<String> model = (DefaultComboBoxModel<String>) view.getjComboBoxCargo().getModel();
     
-        for (String cargo : CARGOS) {
+        for (String cargo : Helper.gCARGOS) {
             
             model.addElement(cargo);
         }

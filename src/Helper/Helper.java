@@ -33,4 +33,8 @@ public class Helper {
         view.getjCheckBoxActive().setSelected(false);
         view.getjComboBoxCargo().setSelectedIndex(0);
     }
+
+    public static ArrayList<String> getCARGOS() {
+        return CARGOS;
+    }
 }
