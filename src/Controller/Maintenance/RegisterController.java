@@ -21,7 +21,7 @@ public class RegisterController {
     private final RegisterView view;
     private final Helper helper;
     private ButtonGroup genre;
-    private static final ArrayList<String> CARGOS = new ArrayList<>();
+    
 
     public RegisterController(RegisterView view) {
     
@@ -45,7 +45,7 @@ public class RegisterController {
 
     private void fillComboBox() {
         
-        FillCargos();
+        helper.fillCargos();
     
         DefaultComboBoxModel<String> model = (DefaultComboBoxModel<String>) view.getjComboBoxCargo().getModel();
     
@@ -57,18 +57,9 @@ public class RegisterController {
         view.getjComboBoxCargo().setModel(model);
     }
 
-    public void FillCargos() {
-        
-        CARGOS.add("Administrador");
-        CARGOS.add("Analista de Sistemas");
-        CARGOS.add("Contador");
-        CARGOS.add("Desenvolvedor");
-        CARGOS.add("Engenheiro Civil");
-    }
-
     public void ClearFields() {
        
-        helper.clearFields();
+        helper.clearFields(view);
     }
     
 }

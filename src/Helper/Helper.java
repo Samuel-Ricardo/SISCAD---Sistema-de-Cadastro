@@ -5,12 +5,28 @@
  */
 package Helper;
 
+import Model.Interface.View;
+import java.util.ArrayList;
+
 /**
  *
  * @author Samuel
  */
 public class Helper {
     
+    private static final ArrayList<String> CARGOS = new ArrayList<>();
     
     
+    public void fillCargos() {
+        
+        CARGOS.add("Administrador");
+        CARGOS.add("Analista de Sistemas");
+        CARGOS.add("Contador");
+        CARGOS.add("Desenvolvedor");
+        CARGOS.add("Engenheiro Civil");
+    }
+    
+    public void clearFields(View view){
+        
+    }
 }

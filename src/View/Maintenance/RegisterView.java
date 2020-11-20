@@ -6,6 +6,7 @@
 package View.Maintenance;
 
 import Controller.Maintenance.RegisterController;
+import Model.Interface.View;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
