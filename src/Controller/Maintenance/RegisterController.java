@@ -31,10 +31,14 @@ public class RegisterController {
     
     public void start(){
     
-        genre.add(view.getjRadioButtonF());
-        genre.add(view.getjRadioButtonM());
+        CreateButtonGroup();
         
         fillComboBox();
+    }
+
+    public void CreateButtonGroup() {
+        genre.add(view.getjRadioButtonF());
+        genre.add(view.getjRadioButtonM());
     }
 
     private void fillComboBox() {
