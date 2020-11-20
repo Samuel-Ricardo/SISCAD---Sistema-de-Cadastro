@@ -40,6 +40,7 @@ public class Helper {
     
     public void fillCargos() {
         
+        CARGOS.clear();
         CARGOS.add("Administrador");
         CARGOS.add("Analista de Sistemas");
         CARGOS.add("Contador");
