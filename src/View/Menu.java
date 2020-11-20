@@ -5,6 +5,8 @@
  */
 package View;
 
+import Controller.MenuController;
+
 /**
  *
  * @author Samuel
@@ -14,8 +16,13 @@ public class Menu extends javax.swing.JFrame {
     /**
      * Creates new form Menu
      */
+    
+    private final MenuController controller;
+    
     public Menu() {
         initComponents();
+        
+        controller = new MenuController(this);
     }
 
     /**
