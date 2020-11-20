@@ -35,7 +35,7 @@ public class RegisterController {
     
         CreateButtonGroup();
         
-        fillComboBox();
+        helper.fillComboBox(view);
     }
 
     public void CreateButtonGroup() {
@@ -43,19 +43,7 @@ public class RegisterController {
         genre.add(view.getjRadioButtonM());
     }
 
-    private void fillComboBox() {
-        
-        helper.fillCargos();
     
-        DefaultComboBoxModel<String> model = (DefaultComboBoxModel<String>) view.getjComboBoxCargo().getModel();
-    
-        for (String cargo : Helper.gCARGOS) {
-            
-            model.addElement(cargo);
-        }
-        
-        view.getjComboBoxCargo().setModel(model);
-    }
 
     public void ClearFields() {
        

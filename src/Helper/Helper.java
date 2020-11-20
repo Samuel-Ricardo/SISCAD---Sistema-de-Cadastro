@@ -7,6 +7,7 @@ package Helper;
 
 import Model.Interface.View;
 import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
 
 /**
  *
@@ -34,6 +35,20 @@ public class Helper {
         view.getjComboBoxCargo().setSelectedIndex(0);
     }
 
+    public void fillComboBox(View view) {
+        
+        fillCargos();
+    
+        DefaultComboBoxModel<String> model = (DefaultComboBoxModel<String>) view.getjComboBoxCargo().getModel();
+    
+        for (String cargo : CARGOS) {
+            
+            model.addElement(cargo);
+        }
+        
+        view.getjComboBoxCargo().setModel(model);
+    }
+    
     public static ArrayList<String> getCARGOS() {
         return CARGOS;
     }
