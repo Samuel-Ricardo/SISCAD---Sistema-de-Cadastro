@@ -27,6 +27,11 @@ public class Dialoger {
         JOptionPane.showMessageDialog(component, exception.getLog(), "Occorreu um Erro", JOptionPane.WARNING_MESSAGE);
     }
     
+    public static void errorMessage(Component component, Exception exception){
+        
+        JOptionPane.showMessageDialog(component, exception.getMessage(), "Occorreu um Erro", JOptionPane.WARNING_MESSAGE);
+    }
+    
     public static void errorMessage(Component component, String message, Exceptions exception){
         
         JOptionPane.showMessageDialog(component, exception.getLog(), message, JOptionPane.WARNING_MESSAGE);
