@@ -6,6 +6,7 @@
 package Controller.Maintenance;
 
 import View.Maintenance.RegisterView;
+import javax.swing.ButtonGroup;
 
 /**
  *
@@ -14,10 +15,20 @@ import View.Maintenance.RegisterView;
 public class RegisterController {
     
     private final RegisterView view;
+    private ButtonGroup genre;
 
     public RegisterController(RegisterView view) {
+    
         this.view = view;
+        genre = new ButtonGroup();
+        
+        start();
     }
     
+    public void start(){
+    
+        genre.add(view.getJRadioButtonF);
+        genre.add(view.getJRadioButtonM);
+    }
     
 }

@@ -7,6 +7,12 @@ package View.Maintenance;
 
 import Controller.Maintenance.RegisterController;
 import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 
 /**
  *
@@ -19,7 +25,7 @@ public class RegisterView extends javax.swing.JDialog {
      */
     
         private final RegisterController controller;
-        private ButtonGroup genre;
+        
     
     public RegisterView(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
@@ -27,9 +33,8 @@ public class RegisterView extends javax.swing.JDialog {
         
         controller = new RegisterController(this);
         
-        genre = new ButtonGroup();
-        genre.add(jRadioButtonF);
-        genre.add(jRadioButtonM);
+        
+        
     }
 
     /**
@@ -190,4 +195,104 @@ public class RegisterView extends javax.swing.JDialog {
     private javax.swing.JTextField jTextFieldAddress;
     private javax.swing.JTextField jTextFieldName;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getjButtonCancel() {
+        return jButtonCancel;
+    }
+
+    public void setjButtonCancel(JButton jButtonCancel) {
+        this.jButtonCancel = jButtonCancel;
+    }
+
+    public JButton getjButtonSave() {
+        return jButtonSave;
+    }
+
+    public void setjButtonSave(JButton jButtonSave) {
+        this.jButtonSave = jButtonSave;
+    }
+
+    public JCheckBox getjCheckBoxActive() {
+        return jCheckBoxActive;
+    }
+
+    public void setjCheckBoxActive(JCheckBox jCheckBoxActive) {
+        this.jCheckBoxActive = jCheckBoxActive;
+    }
+
+    public JComboBox<String> getjComboBoxCargo() {
+        return jComboBoxCargo;
+    }
+
+    public void setjComboBoxCargo(JComboBox<String> jComboBoxCargo) {
+        this.jComboBoxCargo = jComboBoxCargo;
+    }
+
+    public JLabel getjLabelAddress() {
+        return jLabelAddress;
+    }
+
+    public void setjLabelAddress(JLabel jLabelAddress) {
+        this.jLabelAddress = jLabelAddress;
+    }
+
+    public JLabel getjLabelCargo() {
+        return jLabelCargo;
+    }
+
+    public void setjLabelCargo(JLabel jLabelCargo) {
+        this.jLabelCargo = jLabelCargo;
+    }
+
+    public JLabel getjLabelGenre() {
+        return jLabelGenre;
+    }
+
+    public void setjLabelGenre(JLabel jLabelGenre) {
+        this.jLabelGenre = jLabelGenre;
+    }
+
+    public JLabel getjLabelName() {
+        return jLabelName;
+    }
+
+    public void setjLabelName(JLabel jLabelName) {
+        this.jLabelName = jLabelName;
+    }
+
+    public JRadioButton getjRadioButtonF() {
+        return jRadioButtonF;
+    }
+
+    public void setjRadioButtonF(JRadioButton jRadioButtonF) {
+        this.jRadioButtonF = jRadioButtonF;
+    }
+
+    public JRadioButton getjRadioButtonM() {
+        return jRadioButtonM;
+    }
+
+    public void setjRadioButtonM(JRadioButton jRadioButtonM) {
+        this.jRadioButtonM = jRadioButtonM;
+    }
+
+    public JTextField getjTextFieldAddress() {
+        return jTextFieldAddress;
+    }
+
+    public void setjTextFieldAddress(JTextField jTextFieldAddress) {
+        this.jTextFieldAddress = jTextFieldAddress;
+    }
+
+    public JTextField getjTextFieldName() {
+        return jTextFieldName;
+    }
+
+    public void setjTextFieldName(JTextField jTextFieldName) {
+        this.jTextFieldName = jTextFieldName;
+    }
+
+
+
+
 }
