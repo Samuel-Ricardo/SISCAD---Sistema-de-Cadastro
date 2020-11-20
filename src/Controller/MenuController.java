@@ -5,10 +5,19 @@
  */
 package Controller;
 
+import View.Menu;
+
 /**
  *
  * @author Samuel
  */
 public class MenuController {
+    
+    private final Menu view;
+
+    public MenuController(Menu view) {
+        this.view = view;
+    }
+    
     
 }
