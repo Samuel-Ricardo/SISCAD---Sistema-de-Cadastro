@@ -6,6 +6,7 @@
 package Controller.Maintenance;
 
 import View.Maintenance.RegisterView;
+import java.util.ArrayList;
 import javax.swing.ButtonGroup;
 
 /**
@@ -16,6 +17,7 @@ public class RegisterController {
     
     private final RegisterView view;
     private ButtonGroup genre;
+    private static final ArrayList<String> CARGOS = new ArrayList<>();
 
     public RegisterController(RegisterView view) {
     
@@ -27,8 +29,25 @@ public class RegisterController {
     
     public void start(){
     
-        genre.add(view.getJRadioButtonF);
-        genre.add(view.getJRadioButtonM);
+        genre.add(view.getjRadioButtonF());
+        genre.add(view.getjRadioButtonM());
+        
+        fillComboBox();
+    }
+
+    private void fillComboBox() {
+        
+        FillCargos();
+    
+    }
+
+    public void FillCargos() {
+        
+        CARGOS.add("Administrador");
+        CARGOS.add("Analista de Sistemas");
+        CARGOS.add("Contador");
+        CARGOS.add("Desenvolvedor");
+        CARGOS.add("Engenheiro Civil");
     }
     
 }
