@@ -24,12 +24,12 @@ public class Dialoger {
     
     public static void errorMessage(Component component, Exceptions exception){
         
-        JOptionPane.showMessageDialog(component, "Ocorreu um erro: " + exception.getLog());
+        JOptionPane.showMessageDialog(component, exception.getLog(), "Occorreu um Erro", JOptionPane.WARNING_MESSAGE);
     }
     
-    public static void errorMessage(Component component, String message, Exception exception){
+    public static void errorMessage(Component component, String message, Exceptions exception){
         
-        JOptionPane.showMessageDialog(component, message + " " + exception.getMessage());
+        JOptionPane.showMessageDialog(component, exception.getLog(), message, JOptionPane.WARNING_MESSAGE);
     }
 
     public static boolean confirm(Component component, String body) {
