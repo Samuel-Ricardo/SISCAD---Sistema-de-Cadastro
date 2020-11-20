@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import View.Maintenance.Register;
+import View.Maintenance.RegisterView;
 import View.Menu;
 
 /**
@@ -20,9 +20,9 @@ public class MenuController {
         this.view = view;
     }
 
-    public void openRegister() {
+    public void openRegisterView() {
     
-        Register register = new Register();
+        RegisterView register = new RegisterView(view,true);
         
         register.setVisible(true);
         
