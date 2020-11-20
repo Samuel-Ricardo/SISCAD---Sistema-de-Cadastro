@@ -6,6 +6,7 @@
 package View.Maintenance;
 
 import Controller.Maintenance.RegisterController;
+import Controller.Maintenance.UpdaterController;
 import Model.Interface.View;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
@@ -91,8 +92,6 @@ public class UpdaterView extends javax.swing.JDialog implements View{
             }
         });
 
-        jLabelId.setText("0");
-
         jLabelNameCodigo.setText("Codigo");
 
         jButtonDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/lixeira.png"))); // NOI18N
@@ -122,9 +121,9 @@ public class UpdaterView extends javax.swing.JDialog implements View{
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabelNameCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabelNameCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
                                     .addComponent(jLabelId, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(18, 18, 18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabelName)
                                     .addComponent(jTextFieldName, javax.swing.GroupLayout.DEFAULT_SIZE, 345, Short.MAX_VALUE)))
@@ -166,9 +165,9 @@ public class UpdaterView extends javax.swing.JDialog implements View{
                     .addComponent(jLabelName)
                     .addComponent(jLabelNameCodigo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelId))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextFieldName)
+                    .addComponent(jLabelId, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelAddress)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -210,7 +209,7 @@ public class UpdaterView extends javax.swing.JDialog implements View{
     }//GEN-LAST:event_jButtonDeleteActionPerformed
 
     private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchActionPerformed
-        // TODO add your handling code here:
+        controller.search();
     }//GEN-LAST:event_jButtonSearchActionPerformed
 
     /**

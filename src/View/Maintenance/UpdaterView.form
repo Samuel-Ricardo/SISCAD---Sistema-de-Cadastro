@@ -30,10 +30,10 @@
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jLabelNameCodigo" max="32767" attributes="0"/>
+                                  <Component id="jLabelNameCodigo" pref="51" max="32767" attributes="0"/>
                                   <Component id="jLabelId" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabelName" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldName" pref="345" max="32767" attributes="0"/>
@@ -92,9 +92,9 @@
                   <Component id="jLabelNameCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jTextFieldName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelId" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jTextFieldName" max="32767" attributes="0"/>
+                  <Component id="jLabelId" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jLabelAddress" min="-2" max="-2" attributes="0"/>
@@ -192,9 +192,6 @@
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelId">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="0"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelNameCodigo">
       <Properties>

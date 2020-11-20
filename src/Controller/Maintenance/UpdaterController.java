@@ -44,9 +44,9 @@ public class UpdaterController {
         helper.clearFields();
     }
 
-    public void Updater() {
+    public void Update() {
     
-        if(helper.isFieldsEmpty() || view.getJLabelId().getText().equals("")){
+        if(helper.isFieldsEmpty() || view.getjLabelId().getText().equals("")){
             
             Dialoger.message(null, "Algum campo está vazio!!!!!"
                     + "\n"
@@ -55,7 +55,7 @@ public class UpdaterController {
             
             try {
                 Person person = helper.getPerson();
-                person.setId(view.getJLabelId());
+                person.setId(Integer.parseInt(view.getjLabelId().getText()));
                 
                 if(dao.update(person)){
                     Dialoger.message(view, "Atualizado com Sucesso");
@@ -64,6 +64,12 @@ public class UpdaterController {
                 Logger.getLogger(UpdaterController.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+    
+    }
+
+    public void search() {
+     
+        Dialoger.inputDialog();
     
     }
     
