@@ -26,7 +26,10 @@ public class RegisterView extends javax.swing.JDialog {
         initComponents();
         
         controller = new RegisterController(this);
+        
         genre = new ButtonGroup();
+        genre.add(jRadioButtonF);
+        genre.add(jRadioButtonM);
     }
 
     /**

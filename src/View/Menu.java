@@ -136,7 +136,7 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItemRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemRegisterActionPerformed
-        controller.openRegister();
+        controller.openRegisterView();
     }//GEN-LAST:event_jMenuItemRegisterActionPerformed
 
     private void jMenuItemUpdaterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemUpdaterActionPerformed
