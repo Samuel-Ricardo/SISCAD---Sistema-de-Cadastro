@@ -79,25 +79,24 @@ public class Helper {
 
     public boolean isFieldsEmpty() {
         
-        boolean isNameFilled = view.getjTextFieldName().getText().equals(""); 
-        boolean isAddressFilled = view.getjTextFieldAddress().getText().equals(""); 
-        boolean isActiveFilled = isActiveFilled(); 
-        boolean isGenreFilled = view.getjRadioButtonF().isSelected() || view.getjRadioButtonM().isSelected();
+        boolean isNameEmpty = view.getjTextFieldName().getText().equals(""); 
+        boolean isAddressEmpty = view.getjTextFieldAddress().getText().equals("");
+        boolean isGenreEmpty = !(view.getjRadioButtonF().isSelected() || view.getjRadioButtonM().isSelected());
 
         
-        if(isActiveFilled && isAddressFilled && isGenreFilled && isNameFilled){
+        if(isAddressEmpty || isGenreEmpty || isNameEmpty){
             
-            return false;
+            return true;
         }else{
             
             
-            return true;
+            return false;
         }
     }
 
-    public boolean isActiveFilled() {
-        boolean isActiveFilled = view.getjCheckBoxActive().isSelected();
-        return isActiveFilled;
+    public boolean isActiveSelected() {
+        boolean isActiveEmpty = view.getjCheckBoxActive().isSelected();
+        return isActiveEmpty;
     }
 
     public Person getPerson() {
@@ -108,7 +107,7 @@ public class Helper {
         person.setAddress(view.getjTextFieldAddress().getText());
         person.setCargo((String) view.getjComboBoxCargo().getSelectedItem()); 
        
-        if(isActiveFilled()){
+        if(isActiveSelected()){
             
             person.setAtivo(1);
         }else{
