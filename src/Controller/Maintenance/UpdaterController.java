@@ -6,6 +6,7 @@
 package Controller.Maintenance;
 
 import DAO.PersonDAO;
+import Exception.DeletedRecordException;
 import Exception.ElementNotFoundException;
 import Exception.RegistrationSuccessfullyRegistredException;
 import Exception.UpdateErrorException;
@@ -69,7 +70,7 @@ public class UpdaterController {
             }
         }
     
-    }
+    }      
 
     public void search() {
      
@@ -97,5 +98,30 @@ public class UpdaterController {
 
     public static void setSelectedPerson(Person selectedPerson) {
         UpdaterController.selectedPerson = selectedPerson;
+    }
+
+    public void delete() {
+        
+     if(helper.isFieldsEmpty() || view.getjLabelId().getText().equals("")){
+            
+            Dialoger.message(null, "Algum campo está vazio!!!!!"
+                    + "\n"
+                    + "\n Por Favor Certifique-se de que todos os campos estao preenchidos");
+        }else if(selectedPerson == null){
+        
+        Dialoger.message(null, "Nenhuma Pessoa Encontrada!!!!!"
+                    + "\n"
+                    + "\n Por Favor faça uma pesquisa para encontrar a Pessoa");
+    }else{
+                
+            try {
+                if(dao.delete(selectedPerson)){
+                    Dialoger.message(view, "Deletado com Sucesso");
+                }
+            } catch (DeletedRecordException ex) {
+                Logger.getLogger(UpdaterController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        }
     }
 }
