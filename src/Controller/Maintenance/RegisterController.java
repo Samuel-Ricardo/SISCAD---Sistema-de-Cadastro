@@ -22,14 +22,13 @@ public class RegisterController {
     
     private final RegisterView view;
     private final Helper helper;
-    private ButtonGroup genre;
+    
     
 
     public RegisterController(RegisterView view) {
     
         this.view = view;
-        genre = new ButtonGroup();
-        helper = new Helper();
+        helper = new Helper(view);
         
         start();
     }
@@ -38,26 +37,19 @@ public class RegisterController {
     
     public void start(){
     
-        CreateButtonGroup();
+        helper.CreateButtonGroup();
         
-        helper.fillComboBox(view);
+        helper.fillComboBox();
     }
-
-    public void CreateButtonGroup() {
-        genre.add(view.getjRadioButtonF());
-        genre.add(view.getjRadioButtonM());
-    }
-
-    
 
     public void ClearFields() {
        
-        helper.clearFields(view);
+        helper.clearFields();
     }
 
     public void save() {
     
-        if(helper.isFieldsEmpty(view)){
+        if(helper.isFieldsEmpty()){
             
             Dialoger.message(null, "Algum campo está vazio!!!!!"
                     + "\n"

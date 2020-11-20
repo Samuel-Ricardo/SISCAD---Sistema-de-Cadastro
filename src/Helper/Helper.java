@@ -10,6 +10,7 @@ import Model.Person;
 import Util.Dialoger;
 import java.awt.Dialog;
 import java.util.ArrayList;
+import javax.swing.ButtonGroup;
 import javax.swing.DefaultComboBoxModel;
 
 /**
@@ -19,10 +20,12 @@ import javax.swing.DefaultComboBoxModel;
 public class Helper {
     
     private static final ArrayList<String> CARGOS = new ArrayList<>();
+    private final ButtonGroup genre;
     private View view;
 
     public Helper(View view) {
         this.view = view;
+        genre = new ButtonGroup();
     }
     
     public void fillCargos() {
@@ -42,6 +45,11 @@ public class Helper {
         view.getjComboBoxCargo().setSelectedIndex(0);
     }
 
+      public void CreateButtonGroup() {
+        genre.add(view.getjRadioButtonF());
+        genre.add(view.getjRadioButtonM());
+    }
+    
     public void fillComboBox() {
         
         fillCargos();
