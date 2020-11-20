@@ -8,6 +8,8 @@ package Controller.Maintenance;
 import View.Maintenance.RegisterView;
 import java.util.ArrayList;
 import javax.swing.ButtonGroup;
+import javax.swing.ComboBoxModel;
+import javax.swing.DefaultComboBoxModel;
 
 /**
  *
@@ -39,6 +41,14 @@ public class RegisterController {
         
         FillCargos();
     
+        DefaultComboBoxModel<String> model = (DefaultComboBoxModel<String>) view.getjComboBoxCargo().getModel();
+    
+        for (String cargo : CARGOS) {
+            
+            model.addElement(cargo);
+        }
+        
+        view.getjComboBoxCargo().setModel(model);
     }
 
     public void FillCargos() {
