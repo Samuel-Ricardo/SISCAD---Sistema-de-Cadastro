@@ -5,10 +5,19 @@
  */
 package Controller.Maintenance;
 
+import View.Maintenance.Register;
+
 /**
  *
  * @author Samuel
  */
 public class RegisterController {
+    
+    private final Register view;
+
+    public RegisterController(Register view) {
+        this.view = view;
+    }
+    
     
 }
