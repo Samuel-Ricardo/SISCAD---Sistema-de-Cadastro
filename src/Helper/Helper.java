@@ -6,6 +6,8 @@
 package Helper;
 
 import Model.Interface.View;
+import Util.Dialoger;
+import java.awt.Dialog;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 
@@ -51,5 +53,25 @@ public class Helper {
     
     public static ArrayList<String> getCARGOS() {
         return CARGOS;
+    }
+
+    public boolean isFieldsEmpty(View view) {
+        
+        boolean isNameFilled = view.getjTextFieldName().getText().equals(""); 
+        boolean isAddressFilled = view.getjTextFieldAddress().getText().equals(""); 
+        boolean isActiveFilled = view.getjCheckBoxActive().getText().equals(""); 
+        boolean isGenreFilled = view.getjRadioButtonF().isSelected() || view.getjRadioButtonM().isSelected();
+
+        
+        if(isActiveFilled && isAddressFilled && isGenreFilled && isNameFilled){
+            
+            return true;
+        }else{
+            
+            Dialoger.message(null, "Algum campo está vazio!!!!!"
+                    + "\n"
+                    + "\n Por Favor Certifique-se de que todos os campos estao preenchidos");
+            return false;
+        }
     }
 }

@@ -27,9 +27,12 @@ public class RegisterController {
     
         this.view = view;
         genre = new ButtonGroup();
+        helper = new Helper();
         
         start();
     }
+    
+    
     
     public void start(){
     
@@ -48,6 +51,12 @@ public class RegisterController {
     public void ClearFields() {
        
         helper.clearFields(view);
+    }
+
+    public void save() {
+    
+        helper.checkFields();
+    
     }
     
 }

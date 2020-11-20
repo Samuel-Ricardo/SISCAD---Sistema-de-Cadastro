@@ -77,6 +77,11 @@ public class RegisterView extends javax.swing.JDialog implements View{
         jCheckBoxActive.setText("Ativo");
 
         jButtonSave.setText("Salvar");
+        jButtonSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSaveActionPerformed(evt);
+            }
+        });
 
         jButtonCancel.setText("Cancelar");
         jButtonCancel.addActionListener(new java.awt.event.ActionListener() {
@@ -149,6 +154,10 @@ public class RegisterView extends javax.swing.JDialog implements View{
         
         controller.ClearFields();
     }//GEN-LAST:event_jButtonCancelActionPerformed
+
+    private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaveActionPerformed
+        controller.save();
+    }//GEN-LAST:event_jButtonSaveActionPerformed
 
     /**
      * @param args the command line arguments
