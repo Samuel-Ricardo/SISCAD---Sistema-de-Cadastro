@@ -66,8 +66,25 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemAbout">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Sobre"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/View/Images/github-sign_16px.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="GitHub do Projeto"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemAboutActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemAbout1">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/View/Images/github-sign_16px.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="GitHub do Autor"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemAbout1ActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemHelp">
               <Properties>

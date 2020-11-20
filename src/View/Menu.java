@@ -46,6 +46,7 @@ public class Menu extends javax.swing.JFrame {
         jMenuItemGeneralReport = new javax.swing.JMenuItem();
         jMenuAbout = new javax.swing.JMenu();
         jMenuItemAbout = new javax.swing.JMenuItem();
+        jMenuItemAbout1 = new javax.swing.JMenuItem();
         jMenuItemHelp = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -96,8 +97,23 @@ public class Menu extends javax.swing.JFrame {
 
         jMenuAbout.setText("Sobre");
 
-        jMenuItemAbout.setText("Sobre");
+        jMenuItemAbout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/github-sign_16px.png"))); // NOI18N
+        jMenuItemAbout.setText("GitHub do Projeto");
+        jMenuItemAbout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemAboutActionPerformed(evt);
+            }
+        });
         jMenuAbout.add(jMenuItemAbout);
+
+        jMenuItemAbout1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/github-sign_16px.png"))); // NOI18N
+        jMenuItemAbout1.setText("GitHub do Autor");
+        jMenuItemAbout1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemAbout1ActionPerformed(evt);
+            }
+        });
+        jMenuAbout.add(jMenuItemAbout1);
 
         jMenuItemHelp.setText("Ajuda");
         jMenuAbout.add(jMenuItemHelp);
@@ -137,6 +153,14 @@ public class Menu extends javax.swing.JFrame {
     private void jMenuItemGeneralReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemGeneralReportActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemGeneralReportActionPerformed
+
+    private void jMenuItemAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAboutActionPerformed
+        controller.openGitHubOfProject();
+    }//GEN-LAST:event_jMenuItemAboutActionPerformed
+
+    private void jMenuItemAbout1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAbout1ActionPerformed
+        controller.openGitHubOfAuthor();
+    }//GEN-LAST:event_jMenuItemAbout1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -179,6 +203,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar;
     private javax.swing.JMenu jMenuConsult;
     private javax.swing.JMenuItem jMenuItemAbout;
+    private javax.swing.JMenuItem jMenuItemAbout1;
     private javax.swing.JMenuItem jMenuItemGeneralReport;
     private javax.swing.JMenuItem jMenuItemHelp;
     private javax.swing.JMenuItem jMenuItemListing;

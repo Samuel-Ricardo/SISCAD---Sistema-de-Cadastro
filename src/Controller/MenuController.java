@@ -35,6 +35,14 @@ public class MenuController {
         
         updater.setVisible(true);
     }
+
+    public void openGitHubOfProject() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void openGitHubOfAuthor() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }
