@@ -5,6 +5,7 @@
  */
 package Controller.Maintenance;
 
+import Helper.Helper;
 import View.Maintenance.RegisterView;
 import java.util.ArrayList;
 import javax.swing.ButtonGroup;
@@ -18,6 +19,7 @@ import javax.swing.DefaultComboBoxModel;
 public class RegisterController {
     
     private final RegisterView view;
+    private final Helper helper;
     private ButtonGroup genre;
     private static final ArrayList<String> CARGOS = new ArrayList<>();
 
@@ -62,6 +64,11 @@ public class RegisterController {
         CARGOS.add("Contador");
         CARGOS.add("Desenvolvedor");
         CARGOS.add("Engenheiro Civil");
+    }
+
+    public void ClearFields() {
+       
+        helper.clearFields();
     }
     
 }

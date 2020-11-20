@@ -9,6 +9,8 @@ package Helper;
  *
  * @author Samuel
  */
-public class MenuHelper {
+public class Helper {
+    
+    
     
 }

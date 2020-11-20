@@ -18,7 +18,7 @@ import javax.swing.JTextField;
  *
  * @author Samuel
  */
-public class RegisterView extends javax.swing.JDialog {
+public class RegisterView extends javax.swing.JDialog implements View{
 
     /**
      * Creates new form RegisterView
@@ -78,6 +78,11 @@ public class RegisterView extends javax.swing.JDialog {
         jButtonSave.setText("Salvar");
 
         jButtonCancel.setText("Cancelar");
+        jButtonCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCancelActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -138,6 +143,11 @@ public class RegisterView extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
+        
+        controller.ClearFields();
+    }//GEN-LAST:event_jButtonCancelActionPerformed
 
     /**
      * @param args the command line arguments
@@ -291,8 +301,5 @@ public class RegisterView extends javax.swing.JDialog {
     public void setjTextFieldName(JTextField jTextFieldName) {
         this.jTextFieldName = jTextFieldName;
     }
-
-
-
 
 }
