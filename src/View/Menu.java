@@ -27,21 +27,113 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBar = new javax.swing.JMenuBar();
+        jMenuMaintenance = new javax.swing.JMenu();
+        jMenuItemRegister = new javax.swing.JMenuItem();
+        jMenuItemUpdater = new javax.swing.JMenuItem();
+        jMenuItemExclusion = new javax.swing.JMenuItem();
+        jMenuConsult = new javax.swing.JMenu();
+        jMenuItemListing = new javax.swing.JMenuItem();
+        jMenuReport = new javax.swing.JMenu();
+        jMenuItemReportOfActivePersons = new javax.swing.JMenuItem();
+        jMenuItemGeneralReport = new javax.swing.JMenuItem();
+        jMenuAbout = new javax.swing.JMenu();
+        jMenuItemAbout = new javax.swing.JMenuItem();
+        jMenuItemHelp = new javax.swing.JMenuItem();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jMenuMaintenance.setText("Manutenção");
+
+        jMenuItemRegister.setText("Cadastro");
+        jMenuItemRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemRegisterActionPerformed(evt);
+            }
+        });
+        jMenuMaintenance.add(jMenuItemRegister);
+
+        jMenuItemUpdater.setText("Alteração");
+        jMenuItemUpdater.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemUpdaterActionPerformed(evt);
+            }
+        });
+        jMenuMaintenance.add(jMenuItemUpdater);
+
+        jMenuItemExclusion.setText("Exclusão");
+        jMenuItemExclusion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemExclusionActionPerformed(evt);
+            }
+        });
+        jMenuMaintenance.add(jMenuItemExclusion);
+
+        jMenuBar.add(jMenuMaintenance);
+
+        jMenuConsult.setText("Consulta");
+
+        jMenuItemListing.setText("Listagem");
+        jMenuConsult.add(jMenuItemListing);
+
+        jMenuBar.add(jMenuConsult);
+
+        jMenuReport.setText("Relatórios");
+
+        jMenuItemReportOfActivePersons.setText("Relatório de Pessoas Ativas");
+        jMenuReport.add(jMenuItemReportOfActivePersons);
+
+        jMenuItemGeneralReport.setText("Relatório Geral");
+        jMenuItemGeneralReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemGeneralReportActionPerformed(evt);
+            }
+        });
+        jMenuReport.add(jMenuItemGeneralReport);
+
+        jMenuBar.add(jMenuReport);
+
+        jMenuAbout.setText("Sobre");
+
+        jMenuItemAbout.setText("Sobre");
+        jMenuAbout.add(jMenuItemAbout);
+
+        jMenuItemHelp.setText("Ajuda");
+        jMenuAbout.add(jMenuItemHelp);
+
+        jMenuBar.add(jMenuAbout);
+
+        setJMenuBar(jMenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 665, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 444, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItemRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemRegisterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemRegisterActionPerformed
+
+    private void jMenuItemUpdaterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemUpdaterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemUpdaterActionPerformed
+
+    private void jMenuItemExclusionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemExclusionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemExclusionActionPerformed
+
+    private void jMenuItemGeneralReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemGeneralReportActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemGeneralReportActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +171,18 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenuAbout;
+    private javax.swing.JMenuBar jMenuBar;
+    private javax.swing.JMenu jMenuConsult;
+    private javax.swing.JMenuItem jMenuItemAbout;
+    private javax.swing.JMenuItem jMenuItemExclusion;
+    private javax.swing.JMenuItem jMenuItemGeneralReport;
+    private javax.swing.JMenuItem jMenuItemHelp;
+    private javax.swing.JMenuItem jMenuItemListing;
+    private javax.swing.JMenuItem jMenuItemRegister;
+    private javax.swing.JMenuItem jMenuItemReportOfActivePersons;
+    private javax.swing.JMenuItem jMenuItemUpdater;
+    private javax.swing.JMenu jMenuMaintenance;
+    private javax.swing.JMenu jMenuReport;
     // End of variables declaration//GEN-END:variables
 }
