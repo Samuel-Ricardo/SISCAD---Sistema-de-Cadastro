@@ -52,13 +52,16 @@ public class UpdaterController {
             Dialoger.message(null, "Algum campo está vazio!!!!!"
                     + "\n"
                     + "\n Por Favor Certifique-se de que todos os campos estao preenchidos");
-        }else{
+        }else if(selectedPerson == null){
+        
+        Dialoger.message(null, "Nenhuma Pessoa Encontrada!!!!!"
+                    + "\n"
+                    + "\n Por Favor faça uma pesquisa para encontrar a Pessoa");
+    }else{
             
             try {
-                Person person = helper.getPerson();
-                person.setId(Integer.parseInt(view.getjLabelId().getText()));
                 
-                if(dao.update(person)){
+                if(dao.update(selectedPerson)){
                     Dialoger.message(view, "Atualizado com Sucesso");
                 }
             } catch (UpdateErrorException ex) {
