@@ -86,5 +86,12 @@ public class UpdaterController {
             Logger.getLogger(UpdaterController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
+    public static Person getSelectedPerson() {
+        return selectedPerson;
+    }
+
+    public static void setSelectedPerson(Person selectedPerson) {
+        UpdaterController.selectedPerson = selectedPerson;
+    }
 }

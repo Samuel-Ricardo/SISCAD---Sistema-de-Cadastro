@@ -5,6 +5,7 @@
  */
 package Helper;
 
+import Controller.Maintenance.UpdaterController;
 import Model.Interface.View;
 import Model.Person;
 import Util.Dialoger;
@@ -125,6 +126,8 @@ public class Helper {
     }
 
     public void fillFields() {
+        
+        Person person = UpdaterController.g
         
         view.getjTextFieldName().setText("");
         view.getjTextFieldAddress().setText("");
