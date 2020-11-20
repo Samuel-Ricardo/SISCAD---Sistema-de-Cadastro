@@ -29,7 +29,7 @@ public class UpdaterController {
     private final UpdaterView view;
     private final Helper helper;
     private final PersonDAO dao;
-    private static Person selectedPerson;
+    private static Person selectedPerson = null;
     
 
     public UpdaterController(UpdaterView view) {
@@ -75,7 +75,13 @@ public class UpdaterController {
             
             selectedPerson = dao.select(id);
             
-            helper.fillFields();
+            if(selectedPerson != null){
+                
+                 helper.fillFields();
+            }else{
+                Dialoger.message(view, "Pessoa nao Encontrada ;-;");
+            }
+           
         } catch (ElementNotFoundException ex) {
             Logger.getLogger(UpdaterController.class.getName()).log(Level.SEVERE, null, ex);
         }
