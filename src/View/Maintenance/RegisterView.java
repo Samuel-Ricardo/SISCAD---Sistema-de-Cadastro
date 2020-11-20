@@ -32,10 +32,7 @@ public class RegisterView extends javax.swing.JDialog implements View{
         super(parent, modal);
         initComponents();
         
-        controller = new RegisterController(this);
-        
-        
-        
+        controller = new RegisterController(this);   
     }
 
     /**
