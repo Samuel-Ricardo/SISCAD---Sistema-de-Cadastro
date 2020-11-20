@@ -55,7 +55,14 @@ public class MenuController {
     }
 
     public void openGitHubOfAuthor() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       
+         try {
+            URI link = new URI("https://github.com/Samuel-Ricardo");
+            Desktop.getDesktop().browse(link);
+            
+        } catch (URISyntaxException | IOException ex) {
+            ex.printStackTrace();
+        }
     }
     
     
