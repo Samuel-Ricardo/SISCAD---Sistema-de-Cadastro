@@ -31,6 +31,11 @@ public class Dialoger {
         
         JOptionPane.showMessageDialog(component, exception.getLog(), message, JOptionPane.WARNING_MESSAGE);
     }
+    
+    public static void errorMessage(Component component, String message, Exception exception){
+        
+        JOptionPane.showMessageDialog(component, exception.getMessage(), message, JOptionPane.WARNING_MESSAGE);
+    }
 
     public static boolean confirm(Component component, String body) {
        
