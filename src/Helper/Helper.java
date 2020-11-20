@@ -6,6 +6,7 @@
 package Helper;
 
 import Model.Interface.View;
+import Model.Person;
 import Util.Dialoger;
 import java.awt.Dialog;
 import java.util.ArrayList;
@@ -18,7 +19,11 @@ import javax.swing.DefaultComboBoxModel;
 public class Helper {
     
     private static final ArrayList<String> CARGOS = new ArrayList<>();
-    
+    private View view;
+
+    public Helper(View view) {
+        this.view = view;
+    }
     
     public void fillCargos() {
         
@@ -29,7 +34,7 @@ public class Helper {
         CARGOS.add("Engenheiro Civil");
     }
     
-    public void clearFields(View view){
+    public void clearFields(){
         
         view.getjTextFieldName().setText("");
         view.getjTextFieldAddress().setText("");
@@ -37,7 +42,7 @@ public class Helper {
         view.getjComboBoxCargo().setSelectedIndex(0);
     }
 
-    public void fillComboBox(View view) {
+    public void fillComboBox() {
         
         fillCargos();
     
@@ -55,23 +60,51 @@ public class Helper {
         return CARGOS;
     }
 
-    public boolean isFieldsEmpty(View view) {
+    public boolean isFieldsEmpty() {
         
         boolean isNameFilled = view.getjTextFieldName().getText().equals(""); 
         boolean isAddressFilled = view.getjTextFieldAddress().getText().equals(""); 
-        boolean isActiveFilled = view.getjCheckBoxActive().getText().equals(""); 
+        boolean isActiveFilled = isActiveFilled(); 
         boolean isGenreFilled = view.getjRadioButtonF().isSelected() || view.getjRadioButtonM().isSelected();
 
         
         if(isActiveFilled && isAddressFilled && isGenreFilled && isNameFilled){
             
-            return true;
+            return false;
         }else{
             
-            Dialoger.message(null, "Algum campo está vazio!!!!!"
-                    + "\n"
-                    + "\n Por Favor Certifique-se de que todos os campos estao preenchidos");
-            return false;
+            
+            return true;
         }
+    }
+
+    public boolean isActiveFilled() {
+        boolean isActiveFilled = view.getjCheckBoxActive().isSelected();
+        return isActiveFilled;
+    }
+
+    public Person getPerson() {
+  
+        Person person = new Person();
+        
+        person.setName(view.getjTextFieldName().getText());
+        person.setAddress(view.getjTextFieldAddress().getText());
+        person.setCargo((String) view.getjComboBoxCargo().getSelectedItem()); 
+       
+        if(isActiveFilled()){
+            
+            person.setAtivo(1);
+        }else{
+            person.setAtivo(0);
+        }
+        
+        if(view.getjRadioButtonM().isSelected()){
+            
+            person.setGenre("M");
+        }else{
+            person.setGenre("F");
+        }
+        
+        return person;
     }
 }

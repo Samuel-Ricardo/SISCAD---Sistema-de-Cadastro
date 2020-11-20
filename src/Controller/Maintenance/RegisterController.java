@@ -6,6 +6,8 @@
 package Controller.Maintenance;
 
 import Helper.Helper;
+import Model.Person;
+import Util.Dialoger;
 import View.Maintenance.RegisterView;
 import java.util.ArrayList;
 import javax.swing.ButtonGroup;
@@ -55,7 +57,15 @@ public class RegisterController {
 
     public void save() {
     
-        helper.checkFields();
+        if(helper.isFieldsEmpty(view)){
+            
+            Dialoger.message(null, "Algum campo está vazio!!!!!"
+                    + "\n"
+                    + "\n Por Favor Certifique-se de que todos os campos estao preenchidos");
+        }else{
+            
+            Person person = helper.getPerson();
+        }
     
     }
     
