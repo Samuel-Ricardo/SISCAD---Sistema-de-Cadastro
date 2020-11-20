@@ -19,18 +19,10 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemUpdater">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Altera&#xe7;&#xe3;o"/>
+                <Property name="text" type="java.lang.String" value="Altera&#xe7;&#xe3;o // Exclus&#xe3;o"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemUpdaterActionPerformed"/>
-              </Events>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemExclusion">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Exclus&#xe3;o"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemExclusionActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>

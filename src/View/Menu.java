@@ -39,7 +39,6 @@ public class Menu extends javax.swing.JFrame {
         jMenuMaintenance = new javax.swing.JMenu();
         jMenuItemRegister = new javax.swing.JMenuItem();
         jMenuItemUpdater = new javax.swing.JMenuItem();
-        jMenuItemExclusion = new javax.swing.JMenuItem();
         jMenuConsult = new javax.swing.JMenu();
         jMenuItemListing = new javax.swing.JMenuItem();
         jMenuReport = new javax.swing.JMenu();
@@ -63,21 +62,13 @@ public class Menu extends javax.swing.JFrame {
         });
         jMenuMaintenance.add(jMenuItemRegister);
 
-        jMenuItemUpdater.setText("Alteração");
+        jMenuItemUpdater.setText("Alteração // Exclusão");
         jMenuItemUpdater.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemUpdaterActionPerformed(evt);
             }
         });
         jMenuMaintenance.add(jMenuItemUpdater);
-
-        jMenuItemExclusion.setText("Exclusão");
-        jMenuItemExclusion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemExclusionActionPerformed(evt);
-            }
-        });
-        jMenuMaintenance.add(jMenuItemExclusion);
 
         jMenuBar.add(jMenuMaintenance);
 
@@ -140,12 +131,8 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemRegisterActionPerformed
 
     private void jMenuItemUpdaterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemUpdaterActionPerformed
-        // TODO add your handling code here:
+        controller.openUpdateView();
     }//GEN-LAST:event_jMenuItemUpdaterActionPerformed
-
-    private void jMenuItemExclusionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemExclusionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItemExclusionActionPerformed
 
     private void jMenuItemGeneralReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemGeneralReportActionPerformed
         // TODO add your handling code here:
@@ -192,7 +179,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar;
     private javax.swing.JMenu jMenuConsult;
     private javax.swing.JMenuItem jMenuItemAbout;
-    private javax.swing.JMenuItem jMenuItemExclusion;
     private javax.swing.JMenuItem jMenuItemGeneralReport;
     private javax.swing.JMenuItem jMenuItemHelp;
     private javax.swing.JMenuItem jMenuItemListing;

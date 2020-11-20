@@ -27,6 +27,10 @@ public class MenuController {
         register.setVisible(true);
         
     }
+
+    public void openUpdateView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }
