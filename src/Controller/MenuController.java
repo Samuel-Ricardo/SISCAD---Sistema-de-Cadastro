@@ -6,6 +6,7 @@
 package Controller;
 
 import View.Maintenance.RegisterView;
+import View.Maintenance.UpdaterView;
 import View.Menu;
 
 /**
@@ -29,7 +30,10 @@ public class MenuController {
     }
 
     public void openUpdateView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        UpdaterView updater = new UpdaterView(view,true);
+        
+        updater.setVisible(true);
     }
     
     
