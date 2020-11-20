@@ -6,6 +6,7 @@
 package Controller.Maintenance;
 
 import DAO.PersonDAO;
+import Exception.ElementNotFoundException;
 import Exception.RegistrationSuccessfullyRegistredException;
 import Exception.UpdateErrorException;
 import Helper.Helper;
@@ -28,7 +29,7 @@ public class UpdaterController {
     private final UpdaterView view;
     private final Helper helper;
     private final PersonDAO dao;
-    
+    private static Person selectedPerson;
     
 
     public UpdaterController(UpdaterView view) {
@@ -69,8 +70,15 @@ public class UpdaterController {
 
     public void search() {
      
-        Dialoger.inputDialog();
-    
+        try {
+            int id = Integer.parseInt(Dialoger.inputDialog(view, "Pesquisa", "Digite o id: "));
+            
+            selectedPerson = dao.select(id);
+            
+            helper.fillFields();
+        } catch (ElementNotFoundException ex) {
+            Logger.getLogger(UpdaterController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 }

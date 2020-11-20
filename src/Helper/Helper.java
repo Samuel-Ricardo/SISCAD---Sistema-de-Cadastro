@@ -123,4 +123,12 @@ public class Helper {
         
         return person;
     }
+
+    public void fillFields() {
+        
+        view.getjTextFieldName().setText("");
+        view.getjTextFieldAddress().setText("");
+        view.getjCheckBoxActive().setSelected(false);
+        view.getjComboBoxCargo().setSelectedIndex(0);
+    }
 }
