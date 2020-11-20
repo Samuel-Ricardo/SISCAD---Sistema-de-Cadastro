@@ -9,7 +9,7 @@ package Model.Interface;
  *
  * @author Samuel
  */
-public interface Exceptions {
+public interface Exceptions{
     
     
     public String getMessage();

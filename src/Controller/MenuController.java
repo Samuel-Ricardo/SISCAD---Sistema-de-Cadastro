@@ -5,10 +5,28 @@
  */
 package Controller;
 
+import View.Maintenance.RegisterView;
+import View.Menu;
+
 /**
  *
  * @author Samuel
  */
 public class MenuController {
+    
+    private final Menu view;
+
+    public MenuController(Menu view) {
+        this.view = view;
+    }
+
+    public void openRegisterView() {
+    
+        RegisterView register = new RegisterView(view,true);
+        
+        register.setVisible(true);
+        
+    }
+    
     
 }

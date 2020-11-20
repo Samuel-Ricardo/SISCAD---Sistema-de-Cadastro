@@ -5,6 +5,8 @@
  */
 package View;
 
+import Controller.MenuController;
+
 /**
  *
  * @author Samuel
@@ -14,8 +16,13 @@ public class Menu extends javax.swing.JFrame {
     /**
      * Creates new form Menu
      */
+    
+    private final MenuController controller;
+    
     public Menu() {
         initComponents();
+        
+        controller = new MenuController(this);
     }
 
     /**
@@ -27,21 +34,122 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jMenuBar = new javax.swing.JMenuBar();
+        jMenuMaintenance = new javax.swing.JMenu();
+        jMenuItemRegister = new javax.swing.JMenuItem();
+        jMenuItemUpdater = new javax.swing.JMenuItem();
+        jMenuItemExclusion = new javax.swing.JMenuItem();
+        jMenuConsult = new javax.swing.JMenu();
+        jMenuItemListing = new javax.swing.JMenuItem();
+        jMenuReport = new javax.swing.JMenu();
+        jMenuItemReportOfActivePersons = new javax.swing.JMenuItem();
+        jMenuItemGeneralReport = new javax.swing.JMenuItem();
+        jMenuAbout = new javax.swing.JMenu();
+        jMenuItemAbout = new javax.swing.JMenuItem();
+        jMenuItemHelp = new javax.swing.JMenuItem();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/etemb.png"))); // NOI18N
+
+        jMenuMaintenance.setText("Manutenção");
+
+        jMenuItemRegister.setText("Cadastro");
+        jMenuItemRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemRegisterActionPerformed(evt);
+            }
+        });
+        jMenuMaintenance.add(jMenuItemRegister);
+
+        jMenuItemUpdater.setText("Alteração");
+        jMenuItemUpdater.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemUpdaterActionPerformed(evt);
+            }
+        });
+        jMenuMaintenance.add(jMenuItemUpdater);
+
+        jMenuItemExclusion.setText("Exclusão");
+        jMenuItemExclusion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemExclusionActionPerformed(evt);
+            }
+        });
+        jMenuMaintenance.add(jMenuItemExclusion);
+
+        jMenuBar.add(jMenuMaintenance);
+
+        jMenuConsult.setText("Consulta");
+
+        jMenuItemListing.setText("Listagem");
+        jMenuConsult.add(jMenuItemListing);
+
+        jMenuBar.add(jMenuConsult);
+
+        jMenuReport.setText("Relatórios");
+
+        jMenuItemReportOfActivePersons.setText("Relatório de Pessoas Ativas");
+        jMenuReport.add(jMenuItemReportOfActivePersons);
+
+        jMenuItemGeneralReport.setText("Relatório Geral");
+        jMenuItemGeneralReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemGeneralReportActionPerformed(evt);
+            }
+        });
+        jMenuReport.add(jMenuItemGeneralReport);
+
+        jMenuBar.add(jMenuReport);
+
+        jMenuAbout.setText("Sobre");
+
+        jMenuItemAbout.setText("Sobre");
+        jMenuAbout.add(jMenuItemAbout);
+
+        jMenuItemHelp.setText("Ajuda");
+        jMenuAbout.add(jMenuItemHelp);
+
+        jMenuBar.add(jMenuAbout);
+
+        setJMenuBar(jMenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(183, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(182, 182, 182))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(jLabel1)
+                .addContainerGap(91, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItemRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemRegisterActionPerformed
+        controller.openRegisterView();
+    }//GEN-LAST:event_jMenuItemRegisterActionPerformed
+
+    private void jMenuItemUpdaterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemUpdaterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemUpdaterActionPerformed
+
+    private void jMenuItemExclusionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemExclusionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemExclusionActionPerformed
+
+    private void jMenuItemGeneralReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemGeneralReportActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemGeneralReportActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +187,19 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenuAbout;
+    private javax.swing.JMenuBar jMenuBar;
+    private javax.swing.JMenu jMenuConsult;
+    private javax.swing.JMenuItem jMenuItemAbout;
+    private javax.swing.JMenuItem jMenuItemExclusion;
+    private javax.swing.JMenuItem jMenuItemGeneralReport;
+    private javax.swing.JMenuItem jMenuItemHelp;
+    private javax.swing.JMenuItem jMenuItemListing;
+    private javax.swing.JMenuItem jMenuItemRegister;
+    private javax.swing.JMenuItem jMenuItemReportOfActivePersons;
+    private javax.swing.JMenuItem jMenuItemUpdater;
+    private javax.swing.JMenu jMenuMaintenance;
+    private javax.swing.JMenu jMenuReport;
     // End of variables declaration//GEN-END:variables
 }
