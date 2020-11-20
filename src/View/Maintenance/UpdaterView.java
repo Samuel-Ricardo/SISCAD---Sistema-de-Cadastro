@@ -230,13 +230,13 @@ public class UpdaterView extends javax.swing.JDialog implements View{
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(UpdateView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UpdaterView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(UpdateView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UpdaterView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(UpdateView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UpdaterView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(UpdateView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UpdaterView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -244,7 +244,7 @@ public class UpdaterView extends javax.swing.JDialog implements View{
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                UpdateView dialog = new UpdateView(new javax.swing.JFrame(), true);
+                UpdaterView dialog = new UpdaterView(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -274,7 +274,7 @@ public class UpdaterView extends javax.swing.JDialog implements View{
     private javax.swing.JTextField jTextFieldAddress;
     private javax.swing.JTextField jTextFieldName;
     // End of variables declaration//GEN-END:variables
-
+    
     public JButton getjButtonCancel() {
         return jButtonCancel;
     }
@@ -370,5 +370,47 @@ public class UpdaterView extends javax.swing.JDialog implements View{
     public void setjTextFieldName(JTextField jTextFieldName) {
         this.jTextFieldName = jTextFieldName;
     }
+
+    public JButton getjButtonDelete() {
+        return jButtonDelete;
+    }
+
+    public void setjButtonDelete(JButton jButtonDelete) {
+        this.jButtonDelete = jButtonDelete;
+    }
+
+    public JButton getjButtonSearch() {
+        return jButtonSearch;
+    }
+
+    public void setjButtonSearch(JButton jButtonSearch) {
+        this.jButtonSearch = jButtonSearch;
+    }
+
+    public JButton getjButtonUpdate() {
+        return jButtonUpdate;
+    }
+
+    public void setjButtonUpdate(JButton jButtonUpdate) {
+        this.jButtonUpdate = jButtonUpdate;
+    }
+
+    public JLabel getjLabelId() {
+        return jLabelId;
+    }
+
+    public void setjLabelId(JLabel jLabelId) {
+        this.jLabelId = jLabelId;
+    }
+
+    public JLabel getjLabelNameCodigo() {
+        return jLabelNameCodigo;
+    }
+
+    public void setjLabelNameCodigo(JLabel jLabelNameCodigo) {
+        this.jLabelNameCodigo = jLabelNameCodigo;
+    }
+    
+    
 
 }
