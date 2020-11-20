@@ -5,6 +5,8 @@
  */
 package View.Maintenance;
 
+import Controller.Maintenance.RegisterController;
+
 /**
  *
  * @author Samuel
@@ -14,9 +16,14 @@ public class RegisterView extends javax.swing.JDialog {
     /**
      * Creates new form RegisterView
      */
+    
+        private final RegisterController controller;
+    
     public RegisterView(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        
+        controller = new RegisterController(this);
     }
 
     /**

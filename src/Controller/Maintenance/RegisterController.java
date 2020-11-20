@@ -5,7 +5,7 @@
  */
 package Controller.Maintenance;
 
-import View.Maintenance.Register;
+import View.Maintenance.RegisterView;
 
 /**
  *
@@ -13,9 +13,9 @@ import View.Maintenance.Register;
  */
 public class RegisterController {
     
-    private final Register view;
+    private final RegisterView view;
 
-    public RegisterController(Register view) {
+    public RegisterController(RegisterView view) {
         this.view = view;
     }
     
