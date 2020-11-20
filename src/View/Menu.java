@@ -75,6 +75,7 @@ public class Menu extends javax.swing.JFrame {
 
         jMenuConsult.setText("Consulta");
 
+        jMenuItemListing.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/lupa.png"))); // NOI18N
         jMenuItemListing.setText("Listagem");
         jMenuConsult.add(jMenuItemListing);
 

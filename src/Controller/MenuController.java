@@ -8,6 +8,12 @@ package Controller;
 import View.Maintenance.RegisterView;
 import View.Maintenance.UpdaterView;
 import View.Menu;
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -37,7 +43,15 @@ public class MenuController {
     }
 
     public void openGitHubOfProject() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      
+        try {
+            URI link = new URI("https://github.com/Samuel-Ricardo/SISCAD---Sistema-de-Cadastro");
+            Desktop.getDesktop().browse(link);
+            
+        } catch (URISyntaxException | IOException ex) {
+            ex.printStackTrace();
+        }
+        
     }
 
     public void openGitHubOfAuthor() {
