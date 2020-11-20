@@ -127,11 +127,24 @@ public class Helper {
 
     public void fillFields() {
         
-        Person person = UpdaterController.g
+        Person person = UpdaterController.getSelectedPerson();
         
-        view.getjTextFieldName().setText("");
-        view.getjTextFieldAddress().setText("");
-        view.getjCheckBoxActive().setSelected(false);
-        view.getjComboBoxCargo().setSelectedIndex(0);
+        view.getjTextFieldName().setText(person.getName());
+        view.getjTextFieldAddress().setText(person.getAddress());
+        
+        if(person.getAtivo() == 0){
+            view.getjCheckBoxActive().setSelected(false);
+        }else{
+            view.getjCheckBoxActive().setSelected(true);
+        }
+        
+        view.getjComboBoxCargo().getModel().setSelectedItem(person.getCargo());
+        
+        if(person.getGenre().equals("M")){
+        
+            view.getjRadioButtonM().setSelected(true);
+        }else{
+             view.getjRadioButtonF().setSelected(true);
+        }
     }
 }

@@ -78,6 +78,7 @@ public class UpdaterController {
             if(selectedPerson != null){
                 
                  helper.fillFields();
+                 view.getjLabelId().setText(selectedPerson.getId()+"");
             }else{
                 Dialoger.message(view, "Pessoa nao Encontrada ;-;");
             }
