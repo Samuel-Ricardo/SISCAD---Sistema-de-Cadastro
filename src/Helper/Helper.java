@@ -5,6 +5,7 @@
  */
 package Helper;
 
+import Controller.Maintenance.UpdaterController;
 import Model.Interface.View;
 import Model.Person;
 import Util.Dialoger;
@@ -39,6 +40,7 @@ public class Helper {
     
     public void fillCargos() {
         
+        CARGOS.clear();
         CARGOS.add("Administrador");
         CARGOS.add("Analista de Sistemas");
         CARGOS.add("Contador");
@@ -122,5 +124,28 @@ public class Helper {
         }
         
         return person;
+    }
+
+    public void fillFields() {
+        
+        Person person = UpdaterController.getSelectedPerson();
+        
+        view.getjTextFieldName().setText(person.getName());
+        view.getjTextFieldAddress().setText(person.getAddress());
+        
+        if(person.getAtivo() == 0){
+            view.getjCheckBoxActive().setSelected(false);
+        }else{
+            view.getjCheckBoxActive().setSelected(true);
+        }
+        
+        view.getjComboBoxCargo().getModel().setSelectedItem(person.getCargo());
+        
+        if(person.getGenre().equals("M")){
+        
+            view.getjRadioButtonM().setSelected(true);
+        }else{
+             view.getjRadioButtonF().setSelected(true);
+        }
     }
 }
