@@ -26,6 +26,15 @@ public class Helper {
     public Helper(View view) {
         this.view = view;
         genre = new ButtonGroup();
+        
+        start();
+    }
+    
+    public void start(){
+    
+        CreateButtonGroup();
+        
+        fillComboBox();
     }
     
     public void fillCargos() {

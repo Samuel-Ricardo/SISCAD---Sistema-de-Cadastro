@@ -29,17 +29,7 @@ public class RegisterController {
     
         this.view = view;
         helper = new Helper(view);
-        
-        start();
-    }
-    
-    
-    
-    public void start(){
-    
-        helper.CreateButtonGroup();
-        
-        helper.fillComboBox();
+
     }
 
     public void ClearFields() {
