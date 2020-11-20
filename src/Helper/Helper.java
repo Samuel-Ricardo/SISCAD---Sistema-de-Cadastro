@@ -28,5 +28,9 @@ public class Helper {
     
     public void clearFields(View view){
         
+        view.getjTextFieldName().setText("");
+        view.getjTextFieldAddress().setText("");
+        view.getjCheckBoxActive().setSelected(false);
+        view.getjComboBoxCargo().setSelectedIndex(0);
     }
 }
