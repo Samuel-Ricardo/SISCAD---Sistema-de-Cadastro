@@ -6,7 +6,14 @@
 package Controller;
 
 import View.Maintenance.RegisterView;
+import View.Maintenance.UpdaterView;
 import View.Menu;
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -26,6 +33,36 @@ public class MenuController {
         
         register.setVisible(true);
         
+    }
+
+    public void openUpdateView() {
+        
+        UpdaterView updater = new UpdaterView(view,true);
+        
+        updater.setVisible(true);
+    }
+
+    public void openGitHubOfProject() {
+      
+        try {
+            URI link = new URI("https://github.com/Samuel-Ricardo/SISCAD---Sistema-de-Cadastro");
+            Desktop.getDesktop().browse(link);
+            
+        } catch (URISyntaxException | IOException ex) {
+            ex.printStackTrace();
+        }
+        
+    }
+
+    public void openGitHubOfAuthor() {
+       
+         try {
+            URI link = new URI("https://github.com/Samuel-Ricardo");
+            Desktop.getDesktop().browse(link);
+            
+        } catch (URISyntaxException | IOException ex) {
+            ex.printStackTrace();
+        }
     }
     
     

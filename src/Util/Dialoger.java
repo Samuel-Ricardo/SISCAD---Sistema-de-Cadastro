@@ -51,4 +51,14 @@ public class Dialoger {
            return false;
        } 
     }
+
+    public static String inputDialog(Component component, String message) {
+        
+        return JOptionPane.showInputDialog(component, message);
+    }
+    
+    public static String inputDialog(Component component, String title, String message) {
+        
+        return JOptionPane.showInputDialog(component, message, title, JOptionPane.INFORMATION_MESSAGE);
+    }
 }
