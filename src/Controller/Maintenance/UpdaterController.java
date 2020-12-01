@@ -8,18 +8,13 @@ package Controller.Maintenance;
 import DAO.PersonDAO;
 import Exception.DeletedRecordException;
 import Exception.ElementNotFoundException;
-import Exception.RegistrationSuccessfullyRegistredException;
 import Exception.UpdateErrorException;
 import Helper.Helper;
 import Model.Person;
 import Util.Dialoger;
 import View.Maintenance.UpdaterView;
-import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.ButtonGroup;
-import javax.swing.ComboBoxModel;
-import javax.swing.DefaultComboBoxModel;
 
 /**
  *
