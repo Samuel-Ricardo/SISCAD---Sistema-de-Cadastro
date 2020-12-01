@@ -56,6 +56,25 @@ public class TableModelPerson extends AbstractTableModel{
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         
+        Person person = personsList.get(rowIndex);
+        
+        switch(columnIndex){
+          
+            case 0:
+                return person.getId();
+            case 1:
+                return person.getName();
+            case 2:
+                return person.getGenre();
+            case 3:
+                return person.getAddress();
+            case 4:
+                return person.getCargo();
+            case 5:
+                return person.getAtivo();
+            default: 
+                return null;
+        }
         
     }
     
