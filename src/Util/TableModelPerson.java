@@ -78,9 +78,13 @@ public class TableModelPerson extends AbstractTableModel{
         
     }
     
-    public Person getRegistration(int RowIndex){
+    public Person getRegistration(int rowIndex){
         
-        return personsList.get(RowIndex);
+        return personsList.get(rowIndex);
     }
     
+    public boolean isCellEditable(int rowIndex, int columnIndex){
+        
+        return false;
+    }
 }
