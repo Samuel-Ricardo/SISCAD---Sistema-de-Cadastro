@@ -67,7 +67,7 @@ public class PersonDAO implements PersonInterface{
             Dialoger.errorMessage(null, "Erro ao salvar:", ex);  
             return false;   
         } finally {
-            ConnectionFactory.closeConnection(connection, statement);  // closes all connections regardless of success  // fecha todas as conexoes independente de sucesso
+            ConnectionFactory.closeConnection(connection, statement);  
         }
     }
     
@@ -104,7 +104,7 @@ public class PersonDAO implements PersonInterface{
                 Dialoger.errorMessage(null, "Erro ao Atualizar os dados:", ex);  
                 return false;   
             } finally {
-                ConnectionFactory.closeConnection(connection, statement);  // closes all connections regardless of success  // fecha todas as conexoes independente de sucesso
+                ConnectionFactory.closeConnection(connection, statement);  
             }
     }
 
@@ -151,7 +151,7 @@ public class PersonDAO implements PersonInterface{
                 Person person = personFactory.generatePerson(result);
 
                 persons.add(person);
-        }
+               }
            } catch (SQLException ex) {
                Dialoger.errorMessage(null, "Erro ao Consultar o Banco de Dados:", ex);  
            } finally {
