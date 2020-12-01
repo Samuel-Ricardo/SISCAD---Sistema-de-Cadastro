@@ -78,4 +78,9 @@ public class TableModelPerson extends AbstractTableModel{
         
     }
     
+    public Person getRegistration(int RowIndex){
+        
+        return personsList.get(RowIndex);
+    }
+    
 }
