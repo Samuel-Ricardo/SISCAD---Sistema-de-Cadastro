@@ -6,6 +6,7 @@
 package Helper;
 
 import Model.Person;
+import Util.TableModelPerson;
 import java.util.List;
 import javax.swing.JTable;
 
@@ -14,9 +15,12 @@ import javax.swing.JTable;
  * @author Samuel
  */
 public class ListingHelper {
-
-    public void fillTable(JTable jTable, List<Person> selectAll) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    public void fillTable(JTable table, List<Person> persons) {
+        
+        TableModelPerson model = new TableModelPerson(persons);
+        
+        table.setModel(model);
     }
     
     
