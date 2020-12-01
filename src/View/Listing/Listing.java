@@ -27,6 +27,7 @@ public class Listing extends javax.swing.JDialog {
         initComponents();
         
         controller = new ListingController(this);
+        controller.start();
     }
 
     /**

@@ -5,6 +5,7 @@
  */
 package Controller.Listing;
 
+import Helper.ListingHelper;
 import View.Listing.Listing;
 
 /**
@@ -13,10 +14,17 @@ import View.Listing.Listing;
  */
 public class ListingController {
     
-    private Listing view;
+    private final Listing view;
+    private final ListingHelper helper;
 
     public ListingController(Listing view) {
         this.view = view;
+        helper = new ListingHelper();
+    }
+
+    public void start() {
+        
+        helper.fillTable(view.getjTable(),);
     }
     
     
