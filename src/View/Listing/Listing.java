@@ -5,6 +5,8 @@
  */
 package View.Listing;
 
+import Controller.Listing.ListingController;
+
 /**
  *
  * @author Samuel
@@ -14,9 +16,14 @@ public class Listing extends javax.swing.JDialog {
     /**
      * Creates new form Listing
      */
+    
+    private final ListingController controller;
+    
     public Listing(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        
+        controller = new ListingController(this);
     }
 
     /**
