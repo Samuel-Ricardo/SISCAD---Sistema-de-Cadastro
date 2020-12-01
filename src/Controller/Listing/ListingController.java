@@ -5,8 +5,13 @@
  */
 package Controller.Listing;
 
+import DAO.PersonDAO;
+import Exception.EmptyDatabaseException;
 import Helper.ListingHelper;
+import Util.Dialoger;
 import View.Listing.Listing;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -16,15 +21,22 @@ public class ListingController {
     
     private final Listing view;
     private final ListingHelper helper;
+    private final PersonDAO dao;
 
     public ListingController(Listing view) {
         this.view = view;
         helper = new ListingHelper();
+        dao = new PersonDAO();
     }
 
     public void start() {
         
-        helper.fillTable(view.getjTable(),);
+        try {
+            helper.fillTable(view.getjTable(),dao.selectAll());
+        } catch (EmptyDatabaseException ex) {
+            Dialoger.errorMessage(view, "Erro ao Consultar o Banco ", ex);
+            ex.getLog();
+        }
     }
     
     
